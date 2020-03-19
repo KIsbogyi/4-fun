@@ -1,0 +1,12 @@
+import hashlib
+while True:
+    k = str(input('Kérem a Kódot!: '))
+    k =  k.encode('UTF-8')
+    m = hashlib.sha256()
+    m.update(k)
+    c = m.hexdigest()
+    l = str('8f434346648f6b96df89dda901c5176b10a6d83961dd3c1ac88b59b2dc327aa4')
+    if c == l:
+        print('Jó a kód!')
+    else:
+        print('A kód nem jó')
